@@ -35,11 +35,11 @@ async function quest() {
 </script>
 
 <template>
-  <div>
+  <div style="text-align: center">
+    <textarea v-model="prompt" style="width: 70%">prompt</textarea>
+    <button type="button" @click="quest()">질문</button>
     <p v-for="(list, index) in conversation" :key="index">
       {{ list }}
     </p>
-    <textarea v-model="prompt" class="border">prompt</textarea>
-    <button type="button" @click="quest()">질문</button>
   </div>
 </template>
